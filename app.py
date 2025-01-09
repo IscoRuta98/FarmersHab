@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import json
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # Load mock data
 def load_data():
