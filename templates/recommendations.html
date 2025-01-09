@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background" style="background-image: url('/static/images/home_background.jpg');">
+    <h2>Recommendations for {{ location }} ({{ farming_type }})</h2>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <p>Suitability: {{ data.suitability }}</p>
+        <p>Recommendations:</p>
+        <ul>
+            {% for rec in data.recommendations %}
+            <li>{{ rec }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+{% endblock %}

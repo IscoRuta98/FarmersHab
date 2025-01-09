@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background" style="background-image: url('/static/images/services_background.jpg');">
+    <h2>Available Services</h2>
+    <div class="service-container">
+        {% for service in data %}
+        <div class="service-item">
+            <img src="/static/images/{{ service.image }}" alt="{{ service.name }}">
+            <h3>{{ service.name }}</h3>
+            <p>Location: {{ service.location }}</p>
+            <p>Contact: {{ service.contacts }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

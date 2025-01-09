@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="background" style="background-image: url('/static/images/home_background.jpg');">
+    <h2>Welcome to Farmer's Hub</h2>
+    <form action="/recommendations" method="post">
+        <label for="location">Enter your location:</label>
+        <input type="text" id="location" name="location" placeholder="e.g., Gaborone">
+        <label for="farming_type">Select Farming Type:</label>
+        <select id="farming_type" name="farming_type">
+            <option value="goat">Goat Farming</option>
+            <option value="chicken">Chicken Farming</option>
+            <option value="fish">Fish Farming</option>
+            <option value="crop">Crop Production</option>
+            <option value="horticulture">Horticulture</option>
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+    <div class="sections">
+        <div>
+            <a href="/blogs">View Blogs</a>
+        </div>
+        <div>
+            <a href="/markets">View Nearby Markets</a>
+        </div>
+        <div>
+            <a href="/services">View Services</a>
+        </div>
+    </div>
+</div>
+
+<!-- About Us Section -->
+<section class="about-us">
+    <h2>About Us</h2>
+    <p>Farmer's Hub is dedicated to empowering farmers with the tools, resources, and insights they need for sustainable growth and development.</p>
+</section>
+
+<!-- Features Section -->
+<section id="features">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <img src="/static/images/feature1.jpg" alt="Soil Quality">
+            <h3>Soil Quality Assessment</h3>
+            <p>Accurate data to improve crop yield and health.</p>
+        </div>
+        <div class="feature-item">
+            <img src="/static/images/feature2.jpg" alt="Pest & Disease Management">
+            <h3>Pest & Disease Management</h3>
+            <p>Integrated pest control solutions tailored to your needs.</p>
+        </div>
+        <div class="feature-item">
+            <img src="/static/images/feature3.jpg" alt="Loan Assistance">
+            <h3>Loan Assistance</h3>
+            <p>Step-by-step guidance on applying for agricultural loans.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What Farmers Say</h2>
+    <div class="testimonial-item">
+        <p>"Farmer's Hub revolutionized how I manage my farm operations. Highly recommended!"</p>
+        <h4>- John K.</h4>
+    </div>
+    <div class="testimonial-item">
+        <p>"The resources and tools provided are a game-changer for small-scale farmers."</p>
+        <h4>- Jane M.</h4>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter to receive the latest farming tips and insights.</p>
+    <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+{% endblock %}

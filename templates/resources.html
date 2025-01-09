@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Nearby Resources</h2>
+<ul>
+    {% for resource in mock_data["Gaborone"].resources %}
+        <li>{{ resource }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Farmer's Hub</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <img src="/static/images/logo.png" alt="Farmer's Hub Logo" class="logo">
+            <h1>Farmer's Hub</h1>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/news">News</a>
+            <a href="/markets">Markets</a>
+            <a href="/weather">Weather</a>
+            <a href="/loans">Loans</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/services">Services</a>
+            <a href="/consultancy">Consultancy</a>
+            <a href="/marketplace">Buy & Sell</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contact">Contact</a>
+            <a href="/signup" class="signup-button">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Chatbot Integration -->
+    <div id="chatbot">
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            <img src="/static/images/chatbot_icon.png" alt="Chatbot Icon">
+        </div>
+        <div id="chatbot-window" class="hidden">
+            <div class="chatbot-header">
+                <span>Chatbot</span>
+                <button onclick="toggleChatbot()">-</button>
+            </div>
+            <div id="chatbot-messages">
+                <p><strong>Chatbot:</strong> Welcome to Farmer's Hub! How can I assist you today?</p>
+            </div>
+            <div class="chatbot-input-section">
+                <input type="text" id="chatbot-input" placeholder="Type your question...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Farmer's Hub &copy; 2025. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background weather-background">
+    <h2>Weather Forecast</h2>
+    <form action="/weather" method="post">
+        <label for="location">Enter Location:</label>
+        <input type="text" id="location" name="location" placeholder="e.g., Gaborone" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if weather_data %}
+    <div class="weather-item">
+        <h3>Weather in {{ weather_data.location }}</h3>
+        <p><strong>Temperature:</strong> {{ weather_data.temperature }}°C</p>
+        <p><strong>Condition:</strong> {{ weather_data.condition }}</p>
+        <p><strong>Humidity:</strong> {{ weather_data.humidity }}%</p>
+    </div>
+    {% elif error_message %}
+    <div class="error-box">
+        <p>{{ error_message }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

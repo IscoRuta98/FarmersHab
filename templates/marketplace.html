@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background">
+    <h2>Buy & Sell</h2>
+    <a href="/marketplace/post" class="post-item-button">Post an Item</a>
+
+    <!-- Request Items Section -->
+    <div class="request-items">
+        <h3>Request an Item</h3>
+        <p>Looking for something specific? Submit a request, and sellers can approach you!</p>
+        <form action="/marketplace/request" method="post">
+            <label for="item">Item Requested:</label>
+            <input type="text" id="item" name="item" placeholder="e.g., Cattle, Goats" required>
+
+            <label for="location">Your Location:</label>
+            <input type="text" id="location" name="location" placeholder="e.g., Gaborone" required>
+
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" name="contact" placeholder="e.g., Phone or Email" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+    {% if message %}
+    <div class="message-box">
+        <p>{{ message }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Marketplace Items -->
+    <div class="marketplace-container">
+        {% for category, items in categories.items() %}
+        <div class="category-section">
+            <h3>{{ category }}</h3>
+            <div class="items-container">
+                {% for item in items %}
+                <div class="item-card">
+                    <img src="/static/images/{{ item.image }}" alt="{{ item.name }}">
+                    <h4>{{ item.name }}</h4>
+                    <p><strong>Price:</strong> {{ item.price }}</p>
+                    <p><strong>Contact:</strong> {{ item.contact }}</p>
+                    <p>{{ item.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Buyer Requests -->
+    <div class="buyer-requests">
+        <h3>Buyer Requests</h3>
+        <ul>
+            {% for request in buyer_requests %}
+            <li>
+                <strong>Item:</strong> {{ request.item }} |
+                <strong>Location:</strong> {{ request.location }} |
+                <strong>Contact:</strong> {{ request.contact }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

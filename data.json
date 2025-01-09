@@ -1,0 +1,210 @@
+{
+    "markets": [
+        {
+            "name": "Main Market",
+            "image": "market1.jpg",
+            "location": "Plot 123, Gaborone",
+            "contacts": "+267 123 4567"
+        },
+        {
+            "name": "Agri Market",
+            "image": "market2.jpg",
+            "location": "Plot 456, Francistown",
+            "contacts": "+267 987 6543"
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "headline": "Pest Outbreak Threatens Crops in Gaborone",
+            "image": "news1.jpg",
+            "summary": "A new pest outbreak has been reported in Gaborone, threatening local crop yields.",
+            "content": "Farmers in Gaborone have been alerted to a new pest outbreak affecting maize crops. Authorities are advising immediate action to control the situation and minimize losses."
+        },
+        {
+            "id": 2,
+            "headline": "Rainfall Predicted in Francistown Next Week",
+            "image": "news2.jpg",
+            "summary": "Meteorologists forecast heavy rains in Francistown, promising relief for drought-stricken areas.",
+            "content": "The Francistown Meteorological Department has announced expected rainfall next week, providing much-needed water for local farmers and their crops."
+        }
+    ],
+    "services": [
+        {
+            "name": "Veterinary Clinic",
+            "image": "service1.jpg",
+            "location": "Plot 789, Gaborone",
+            "contacts": "+267 555 1212"
+        },
+        {
+            "name": "Tractor Rentals",
+            "image": "service2.jpg",
+            "location": "Plot 321, Francistown",
+            "contacts": "+267 444 3333"
+        },
+        
+        {
+            "name": "Transport Services",
+            "location": "Maun",
+            "contacts": "567-890-123",
+            "image": "transport.jpg"
+        },
+        {
+            "name": "Warehousing and Storage",
+            "location": "Lobatse",
+            "contacts": "345-678-901",
+            "image": "warehousing.jpg"
+        }
+    ],
+
+    
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Sustainable Farming Practices",
+            "content": "Discover how to farm sustainably to protect the environment.",
+            "image": "blog1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Maximizing Crop Yields",
+            "content": "Learn techniques to boost your crop production effectively.",
+            "image": "blog2.jpg"
+        }
+    ],
+    "marketplace_categories": {
+    "Crops": [
+        {
+            "name": "Fresh Maize",
+            "image": "maize.jpg",
+            "price": "BWP 200 per sack",
+            "description": "Freshly harvested maize from Francistown.",
+            "contact": "+267 123 4567"
+        },
+        {
+            "name": "Sweet Potatoes",
+            "image": "sweet_potatoes.jpg",
+            "price": "BWP 150 per bag",
+            "description": "Organic sweet potatoes grown locally.",
+            "contact": "+267 234 5678"
+        }
+    ],
+    "Livestock": [
+        {
+            "name": "Goats for Sale",
+            "image": "goats.jpg",
+            "price": "BWP 1500 each",
+            "description": "Healthy goats, perfect for farming or breeding.",
+            "contact": "+267 987 6543"
+        },
+        {
+            "name": "Chickens",
+            "image": "chickens.jpg",
+            "price": "BWP 50 each",
+            "description": "Free-range chickens available for sale.",
+            "contact": "+267 876 5432"
+        }
+    ],
+    "Equipment": [
+        {
+            "name": "Tractor for Hire",
+            "image": "tractor.jpg",
+            "price": "BWP 500 per day",
+            "description": "Tractor available for farm operations.",
+            "contact": "+267 555 1234"
+        },
+        {
+            "name": "Irrigation Pump",
+            "image": "irrigation_pump.jpg",
+            "price": "BWP 1200",
+            "description": "Efficient water pump for irrigation systems.",
+            "contact": "+267 444 3210"
+        }
+    ]
+}
+
+    ,
+    "Gaborone": {
+        "soil_type": "Sandy",
+        "recommended_crops": ["Sorghum", "Beans", "Maize"],
+        "pests": ["Locusts", "Armyworms"],
+        "climate": {
+            "rainfall": "450 mm/year",
+            "temperature": "25°C"
+        },
+        "farming": {
+            "goat": {
+                "suitability": "High",
+                "recommendations": ["Use dry fodder", "Install water troughs"]
+            },
+            "fish": {
+                "suitability": "Moderate",
+                "recommendations": ["Install aerators", "Check water pH"]
+            }
+        }
+    },
+    "Francistown": {
+        "soil_type": "Clay",
+        "recommended_crops": ["Rice", "Sweet Potatoes", "Groundnuts"],
+        "pests": ["Weevils", "Aphids"],
+        "climate": {
+            "rainfall": "500 mm/year",
+            "temperature": "23°C"
+        },
+        "farming": {
+            "chicken": {
+                "suitability": "High",
+                "recommendations": ["Build ventilated coops", "Use layer feed"]
+            },
+            "cattle": {
+                "suitability": "High",
+                "recommendations": ["Plant silage", "Install watering points"]
+            }
+        }
+    },
+    "Maun": {
+        "soil_type": "Loamy",
+        "recommended_crops": ["Vegetables", "Fruits"],
+        "pests": ["Fruit Flies", "Mites"],
+        "climate": {
+            "rainfall": "550 mm/year",
+            "temperature": "27°C"
+        },
+        "farming": {
+            "horticulture": {
+                "suitability": "High",
+                "recommendations": ["Use drip irrigation", "Apply organic fertilizers"]
+            }
+        }
+    },
+    "Kasane": {
+        "soil_type": "Sandy-Loam",
+        "recommended_crops": ["Tomatoes", "Cabbages", "Peppers"],
+        "pests": ["Spider Mites", "Cutworms"],
+        "climate": {
+            "rainfall": "480 mm/year",
+            "temperature": "30°C"
+        },
+        "farming": {
+            "dairy": {
+                "suitability": "Moderate",
+                "recommendations": ["Ensure adequate forage", "Provide clean water"]
+            }
+        }
+    },
+    "Palapye": {
+        "soil_type": "Clay-Loam",
+        "recommended_crops": ["Wheat", "Barley"],
+        "pests": ["Stem Borers", "Cutworms"],
+        "climate": {
+            "rainfall": "470 mm/year",
+            "temperature": "28°C"
+        },
+        "farming": {
+            "poultry": {
+                "suitability": "High",
+                "recommendations": ["Use quality feed", "Maintain biosecurity"]
+            }
+        }
+    }
+}

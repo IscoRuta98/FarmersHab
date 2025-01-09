@@ -1,0 +1,10 @@
+{
+    "livestock": {
+        "goats": {"best_month": "March", "price_per_unit": "1500 BWP"},
+        "cattle": {"best_month": "May", "price_per_unit": "7500 BWP"}
+    },
+    "crops": {
+        "maize": {"best_month": "June", "price_per_kg": "5 BWP"},
+        "wheat": {"best_month": "July", "price_per_kg": "4 BWP"}
+    }
+}

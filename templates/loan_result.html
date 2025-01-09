@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background">
+    <h2>Loan Calculation Result</h2>
+    <p><strong>Loan Amount:</strong> BWP {{ loan_amount }}</p>
+    <p><strong>Interest Rate:</strong> {{ interest_rate }}%</p>
+    <p><strong>Loan Term:</strong> {{ years }} years</p>
+    <p><strong>Monthly Payment:</strong> BWP {{ monthly_payment }}</p>
+    <p><strong>Total Payment:</strong> BWP {{ total_payment }}</p>
+    <a href="/loans" class="button">Back to Loan Center</a>
+</div>
+{% endblock %}

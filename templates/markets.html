@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background" style="background-image: url('/static/images/markets_background.jpg');">
+    <h2>Nearby Markets</h2>
+    <div class="market-container">
+        {% for market in data %}
+        <div class="market-item">
+            <img src="/static/images/{{ market.image }}" alt="{{ market.name }}">
+            <h3>{{ market.name }}</h3>
+            <p>Location: {{ market.location }}</p>
+            <p>Contact: {{ market.contacts }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

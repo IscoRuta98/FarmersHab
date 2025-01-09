@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Existing Consultancy Content -->
+<div class="background">
+    <h2>Consultancy Services</h2>
+    <p>Ask questions, upload images, and get expert advice tailored to your needs.</p>
+    <p>We use GPS and remote sensing data to provide soil moisture, pest risk, and irrigation advice for your location.</p>
+    <form action="/consultancy" method="post" enctype="multipart/form-data">
+        <label for="question">Your Question:</label>
+        <textarea id="question" name="question" placeholder="Describe your issue..." required></textarea>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter your location (e.g., Gaborone)" required>
+
+        <label for="image">Upload an Image (optional):</label>
+        <input type="file" id="image" name="image">
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Livestock Management Section -->
+<div class="feature-section">
+    <h3>Livestock Management</h3>
+    <p>Track your livestock inventory, monitor health status, and manage feed schedules with ease.</p>
+    <form action="/livestock" method="post">
+        <label for="animal_type">Animal Type:</label>
+        <input type="text" id="animal_type" name="animal_type" placeholder="e.g., Cattle, Goats" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="health_status">Health Status:</label>
+        <input type="text" id="health_status" name="health_status" placeholder="e.g., Good, Requires Attention" required>
+
+        <button type="submit">Add Livestock</button>
+    </form>
+
+    <h4>Current Livestock Records:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Animal Type</th>
+                <th>Quantity</th>
+                <th>Health Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for livestock in livestock_data %}
+            <tr>
+                <td>{{ livestock['animal_type'] }}</td>
+                <td>{{ livestock['quantity'] }}</td>
+                <td>{{ livestock['health_status'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- BAMB Input Tracking Section -->
+<div class="feature-section">
+    <h3>BAMB Input Tracking</h3>
+    <p>Monitor fertilizer usage, seed distribution, and crop yields to optimize your agricultural practices.</p>
+    <form action="/bamb" method="post">
+        <label for="input_type">Input Type:</label>
+        <input type="text" id="input_type" name="input_type" placeholder="e.g., Fertilizer, Seeds" required>
+
+        <label for="quantity_used">Quantity Used:</label>
+        <input type="number" id="quantity_used" name="quantity_used" required>
+
+        <label for="crop_yield">Crop Yield (kg):</label>
+        <input type="number" id="crop_yield" name="crop_yield" required>
+
+        <button type="submit">Add Record</button>
+    </form>
+
+    <h4>Input Usage Records:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Input Type</th>
+                <th>Quantity Used</th>
+                <th>Crop Yield</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in input_data %}
+            <tr>
+                <td>{{ record['input_type'] }}</td>
+                <td>{{ record['quantity_used'] }}</td>
+                <td>{{ record['crop_yield'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Remote Sensing Section -->
+<div class="feature-section">
+    <h3>Remote Sensing</h3>
+    <p>Enter your location to get soil moisture, pest risk, and irrigation advice.</p>
+    <form action="/remote-sensing" method="post">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="e.g., Gaborone" required>
+        <button type="submit">Get Data</button>
+    </form>
+
+    {% if data %}
+    <div class="results">
+        <h4>Remote Sensing Data for {{ location }}</h4>
+        <p><strong>Soil Moisture:</strong> {{ data.soil_moisture }}</p>
+        <p><strong>Pest Risk:</strong> {{ data.pest_risk }}</p>
+        <p><strong>Irrigation Advice:</strong> {{ data.irrigation_advice }}</p>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Market Insights Section -->
+<div class="feature-section">
+    <h3>Market Insights</h3>
+    <p>Explore the best time to sell your livestock or crops and market price trends.</p>
+    {% for category, items in market_data.items() %}
+    <h4>{{ category.capitalize() }}</h4>
+    <ul>
+        {% for item, details in items.items() %}
+        <li>
+            <strong>{{ item.capitalize() }}:</strong> Best Month - {{ details.best_month }}, 
+            Price - {{ details.price_per_unit or details.price_per_kg }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</div>
+
+<!-- Feedback Mechanism Section -->
+<div class="feature-section">
+    <h3>Feedback and Issue Reporting</h3>
+    <p>Let us know your thoughts or report any issues.</p>
+    <form action="/feedback" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your feedback or issue here..." required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <h4>Feedback Received</h4>
+    <ul>
+        {% for feedback in feedback_data %}
+        <li><strong>{{ feedback.name }}:</strong> {{ feedback.message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

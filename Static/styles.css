@@ -1,0 +1,871 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #004d00;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Hero Section */
+.background {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.sections div a {
+    background-color: #004d00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sections div a:hover {
+    background-color: #003300;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.about-us h2 {
+    color: #004d00;
+}
+
+/* Features Section */
+#features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+}
+
+.feature-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.feature-item h3 {
+    color: #004d00;
+    margin-top: 15px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial-item {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+}
+
+.testimonial-item h4 {
+    margin-top: 10px;
+    color: #004d00;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: #004d00;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.newsletter form {
+    margin-top: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background: #003300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background: #002200;
+}
+
+/* Chatbot styles */
+/* Chatbot styles */
+.chatbot-icon {
+    position: fixed;
+    bottom: 80px; /* Increased from 20px to lift above the base */
+    right: 20px; /* Position from the right edge */
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #004d00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-icon img {
+    height: 70%;
+    width: 70%;
+    object-fit: cover;
+}
+
+#chatbot-window {
+    position: fixed;
+    bottom: 170px; /* Adjusted for a more visible position */
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d00;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#chatbot-messages {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 100px);
+}
+
+.chatbot-input-section {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+#chatbot-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chatbot-input-section button {
+    background: #004d00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+/* Background styling */
+.background {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    text-shadow: 1px 1px 5px #000;
+}
+
+/* News, markets, and services container */
+.news-container, .market-container, .service-container, .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.news-item, .market-item, .service-item, .blog-item {
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.news-item:hover, .market-item:hover, .service-item:hover, .blog-item:hover {
+    transform: scale(1.05);
+}
+
+.news-item img, .market-item img, .service-item img, .blog-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.marketplace-container {
+    padding: 20px;
+}
+
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #004d00;
+    text-align: left;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.item-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.item-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.item-card h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #004d00;
+}
+
+.item-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.post-item-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #004d00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.post-item-button:hover {
+    background-color: #003300;
+}
+
+/* Forms styling */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #004d00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #003300;
+}
+
+/* Blog-specific styling */
+.blog-title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ebebf0; /* Professional dark green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-title:hover {
+    text-decoration: underline;
+}
+
+.post-blog-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #002b00;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.post-blog-button:hover {
+    background-color: #003300;
+}
+
+/* Blog detail styling */
+.blog-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.blog-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-detail h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #004d00;
+}
+
+.blog-detail p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+}
+.weather-item {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+.weather-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.loan-background {
+    background-image: url('/static/images/loan_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 80px); /* Minimum height to cover the viewport minus the header */
+    padding: 20px; /* Adds spacing around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+.weather-background {
+    background-image: url('/static/images/weather_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 80px); /* Full viewport minus header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+ .weather-background h2 {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+ .weather-background p {
+    color: #e0e0e0;
+}
+/*Consultancy page */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form textarea, form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #004d00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003300;
+}
+
+form input[type="file"] {
+    padding: 5px;
+}
+
+
+.feature-section h3 {
+    color: #004d00;
+    margin-bottom: 20px;
+}
+
+.feature-section p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.feature-section form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.feature-section form input,
+.feature-section form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.feature-section form button {
+    background-color: #004d00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.feature-section form button:hover {
+    background-color: #003300;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #004d00;
+}
+/* Loan Page Styling */
+.background.loan-background {
+    padding: 20px;
+    margin-top: 80px; /* Prevents overlapping with the header */
+    min-height: calc(100vh - 80px); /* Full height minus header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loan-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #004d00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #003300;
+}
+
+/* Loan Calculator Styling */
+.loan-calculator {
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.loan-calculator h3 {
+    margin-bottom: 15px;
+    color: #004d00;
+}
+
+.loan-calculator label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.loan-calculator input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.loan-calculator button {
+    background-color: #004d00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.loan-calculator button:hover {
+    background-color: #003300;
+}
+
+/* Button Styling */
+.button {
+    background-color: #004d00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 15px 0;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #003300;
+}
+/* Request Items Section */
+.request-items {
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: left;
+}
+
+.request-items h3 {
+    margin-bottom: 15px;
+    color: #004d00;
+}
+
+.request-items p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.request-items form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.request-items form input, .request-items form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.request-items form button {
+    background-color: #004d00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.request-items form button:hover {
+    background-color: #003300;
+}
+.message-box {
+    background-color: #004d00;
+    color: white;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.error-box {
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 10px;
+    border: 1px solid #d8000c;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.weather-item {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+/* Style for Sign-Up Button */
+.signup-button {
+    background-color: #004d00;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+    background-color: #003300;
+}
+
+/* Style for Sign-Up Form */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #004d00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003300;
+}
+.forecast-container {
+    margin-top: 20px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.forecast-item {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-item h4 {
+    margin-bottom: 10px;
+    color: #004d00;
+}
+
+.forecast-item p {
+    margin: 5px 0;
+    color: #333;
+}

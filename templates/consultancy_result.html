@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background">
+    <h2>Consultancy Results</h2>
+    <p><strong>Your Question:</strong> {{ question }}</p>
+    <p><strong>Location:</strong> {{ location }}</p>
+    <p><strong>Expert Advice:</strong> {{ expert_advice }}</p>
+    <p><strong>Remote Sensing Advice:</strong> {{ remote_advice }}</p>
+
+    {% if image_result %}
+    <p><strong>Image Analysis:</strong> {{ image_result }}</p>
+    {% else %}
+    <p><strong>Image Analysis:</strong> No image uploaded.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background loan-background">
+    <div class="loan-container">
+        <h2>Loan Assistance Center</h2>
+        <p>We provide step-by-step guidance for Agricultural loans.</p>
+
+        <!-- Download Template Section -->
+        <a href="/static/templates/business_plan_template.pdf" class="button">Download Business Plan Template</a>
+
+        <!-- Loan Application Form -->
+        <form action="/loans/apply" method="post" enctype="multipart/form-data">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="id">National ID:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="documents">Upload Supporting Documents:</label>
+            <input type="file" id="documents" name="documents[]" multiple required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <!-- Loan Calculator Section -->
+        <div class="loan-calculator">
+            <h3>Loan Calculator</h3>
+            <form action="/calculate-loan" method="post">
+                <label for="loan_amount">Loan Amount (BWP):</label>
+                <input type="number" id="loan_amount" name="loan_amount" placeholder="Enter loan amount" required>
+
+                <label for="interest_rate">Interest Rate (%):</label>
+                <input type="number" id="interest_rate" name="interest_rate" placeholder="Enter interest rate" step="0.01" required>
+
+                <label for="years">Loan Term (Years):</label>
+                <input type="number" id="years" name="years" placeholder="Enter loan term" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

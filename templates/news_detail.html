@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="background" style="background-image: url('/static/images/news_background.jpg');">
+    <h2>{{ article.headline }}</h2>
+    <img src="/static/images/{{ article.image }}" alt="{{ article.headline }}">
+    <p>{{ article.content }}</p>
+</div>
+{% endblock %}
