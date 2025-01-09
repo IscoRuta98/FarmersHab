@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Farmer's Hub</title>
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="header-container">
-            <img src="/static/images/logo.png" alt="Farmer's Hub Logo" class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Farmer's Hub Logo" class="logo">
             <h1>Farmer's Hub</h1>
         </div>
         <nav>
@@ -37,7 +37,7 @@
     <!-- Chatbot Integration -->
     <div id="chatbot">
         <div class="chatbot-icon" onclick="toggleChatbot()">
-            <img src="/static/images/chatbot_icon.png" alt="Chatbot Icon">
+            <img src="{{ url_for('static', filename='images/chatbot_icon.png') }}" alt="Chatbot Icon">
         </div>
         <div id="chatbot-window" class="hidden">
             <div class="chatbot-header">
@@ -59,6 +59,6 @@
         <p>Farmer's Hub &copy; 2025. All rights reserved.</p>
     </footer>
 
-    <script src="/static/chatbot.js"></script>
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
 </body>
 </html>

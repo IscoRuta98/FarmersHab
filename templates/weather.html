@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="background weather-background">
+<div class="background weather-background" style="background-image: url('{{ url_for('static', filename='images/weather_background.jpg') }}');">
     <h2>Weather Forecast</h2>
     <form action="/weather" method="post">
         <label for="location">Enter Location:</label>

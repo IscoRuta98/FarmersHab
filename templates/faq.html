@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="background" style="background-image: url('/static/images/home_background.jpg'); background-size: cover; height: 52vh;">
+<div class="background" style="background-image: url('{{ url_for('static', filename='images/home_background.jpg') }}'); background-size: cover; height: 52vh;">
     <h2>FAQ</h2>
     <ul>
         <li><strong>How do I find nearby markets?</strong> Use the "Markets" tab to explore local markets.</li>

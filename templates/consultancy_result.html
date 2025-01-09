@@ -9,9 +9,10 @@
     <p><strong>Remote Sensing Advice:</strong> {{ remote_advice }}</p>
 
     {% if image_result %}
-    <p><strong>Image Analysis:</strong> {{ image_result }}</p>
+    <p><strong>Image Analysis:</strong> <img src="{{ url_for('static', filename='images/' + image_result) }}" alt="Image Analysis"></p>
     {% else %}
     <p><strong>Image Analysis:</strong> No image uploaded.</p>
     {% endif %}
 </div>
 {% endblock %}
+

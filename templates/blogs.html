@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="background" style="background-image: url('/static/images/services_background.jpg');">
+<div class="background" style="background-image: url('{{ url_for('static', filename='images/services_background.jpg') }}');">
     <h2>Farmer Blogs</h2>
     <div class="blog-container">
         {% for blog in blogs %}
         <div class="blog-item">
-            <img src="/static/images/{{ blog.image }}" alt="{{ blog.title }}" class="blog-image">
+            <img src="{{ url_for('static', filename='images/' + blog.image) }}" alt="{{ blog.title }}" class="blog-image">
             <h3><a href="/blogs/{{ blog.id }}" class="blog-title">{{ blog.title }}</a></h3>
         </div>
         {% endfor %}

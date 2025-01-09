@@ -7,7 +7,7 @@
         <p>We provide step-by-step guidance for Agricultural loans.</p>
 
         <!-- Download Template Section -->
-        <a href="/static/templates/business_plan_template.pdf" class="button">Download Business Plan Template</a>
+        <a href="{{ url_for('static', filename='templates/business_plan_template.pdf') }}" class="button">Download Business Plan Template</a>
 
         <!-- Loan Application Form -->
         <form action="/loans/apply" method="post" enctype="multipart/form-data">

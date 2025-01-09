@@ -8,6 +8,6 @@
     <p><strong>Loan Term:</strong> {{ years }} years</p>
     <p><strong>Monthly Payment:</strong> BWP {{ monthly_payment }}</p>
     <p><strong>Total Payment:</strong> BWP {{ total_payment }}</p>
-    <a href="/loans" class="button">Back to Loan Center</a>
+    <a href="{{ url_for('loans') }}" class="button">Back to Loan Center</a>
 </div>
 {% endblock %}

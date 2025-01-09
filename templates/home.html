@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- Hero Section -->
-<div class="background" style="background-image: url('/static/images/home_background.jpg');">
+<div class="background" style="background-image: url('{{ url_for('static', filename='images/home_background.jpg') }}');">
     <h2>Welcome to Farmer's Hub</h2>
     <form action="/recommendations" method="post">
         <label for="location">Enter your location:</label>
@@ -42,17 +42,17 @@
     <h2>Key Features</h2>
     <div class="feature-grid">
         <div class="feature-item">
-            <img src="/static/images/feature1.jpg" alt="Soil Quality">
+            <img src="{{ url_for('static', filename='images/feature1.jpg') }}" alt="Soil Quality">
             <h3>Soil Quality Assessment</h3>
             <p>Accurate data to improve crop yield and health.</p>
         </div>
         <div class="feature-item">
-            <img src="/static/images/feature2.jpg" alt="Pest & Disease Management">
+            <img src="{{ url_for('static', filename='images/feature2.jpg') }}" alt="Pest & Disease Management">
             <h3>Pest & Disease Management</h3>
             <p>Integrated pest control solutions tailored to your needs.</p>
         </div>
         <div class="feature-item">
-            <img src="/static/images/feature3.jpg" alt="Loan Assistance">
+            <img src="{{ url_for('static', filename='images/feature3.jpg') }}" alt="Loan Assistance">
             <h3>Loan Assistance</h3>
             <p>Step-by-step guidance on applying for agricultural loans.</p>
         </div>
@@ -83,3 +83,4 @@
 </section>
 
 {% endblock %}
+

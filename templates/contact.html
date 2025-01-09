@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="background" style="background-image: url('/static/images/home_background.jpg'); background-size: cover; height: 52vh;">
+<div class="background" style="background-image: url('{{ url_for('static', filename='images/home_background.jpg') }}'); background-size: cover; height: 52vh;">
     <h2>Contact Us</h2>
     <p>Email: support@farmershub.com</p>
     <p>Phone: +267 123 4567</p>

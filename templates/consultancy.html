@@ -6,7 +6,7 @@
     <h2>Consultancy Services</h2>
     <p>Ask questions, upload images, and get expert advice tailored to your needs.</p>
     <p>We use GPS and remote sensing data to provide soil moisture, pest risk, and irrigation advice for your location.</p>
-    <form action="/consultancy" method="post" enctype="multipart/form-data">
+    <form action="{{ url_for('consultancy') }}" method="post" enctype="multipart/form-data">
         <label for="question">Your Question:</label>
         <textarea id="question" name="question" placeholder="Describe your issue..." required></textarea>
 
@@ -24,7 +24,7 @@
 <div class="feature-section">
     <h3>Livestock Management</h3>
     <p>Track your livestock inventory, monitor health status, and manage feed schedules with ease.</p>
-    <form action="/livestock" method="post">
+    <form action="{{ url_for('livestock') }}" method="post">
         <label for="animal_type">Animal Type:</label>
         <input type="text" id="animal_type" name="animal_type" placeholder="e.g., Cattle, Goats" required>
 
@@ -62,7 +62,7 @@
 <div class="feature-section">
     <h3>BAMB Input Tracking</h3>
     <p>Monitor fertilizer usage, seed distribution, and crop yields to optimize your agricultural practices.</p>
-    <form action="/bamb" method="post">
+    <form action="{{ url_for('bamb') }}" method="post">
         <label for="input_type">Input Type:</label>
         <input type="text" id="input_type" name="input_type" placeholder="e.g., Fertilizer, Seeds" required>
 
@@ -100,7 +100,7 @@
 <div class="feature-section">
     <h3>Remote Sensing</h3>
     <p>Enter your location to get soil moisture, pest risk, and irrigation advice.</p>
-    <form action="/remote-sensing" method="post">
+    <form action="{{ url_for('remote_sensing') }}" method="post">
         <label for="location">Location:</label>
         <input type="text" id="location" name="location" placeholder="e.g., Gaborone" required>
         <button type="submit">Get Data</button>
@@ -137,7 +137,7 @@
 <div class="feature-section">
     <h3>Feedback and Issue Reporting</h3>
     <p>Let us know your thoughts or report any issues.</p>
-    <form action="/feedback" method="post">
+    <form action="{{ url_for('feedback') }}" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 

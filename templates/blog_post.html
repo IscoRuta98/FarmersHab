@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="background" style="background-image: url('/static/images/services_background.jpg');">
+<div class="background" style="background-image: url('{{ url_for('static', filename='images/services_background.jpg') }}');">
     <h2>Post a Blog</h2>
     <form action="/blogs/post" method="post">
         <label for="title">Blog Title:</label>
