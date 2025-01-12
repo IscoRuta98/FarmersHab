@@ -6,7 +6,7 @@
         "use": "@vercel/python"
       },
       {
-        "src": "static/**/*",
+        "src": "Static/**/*",
         "use": "@vercel/static"
     }
     ],
@@ -16,8 +16,8 @@
         "dest": "app.py"
       },
       {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
+        "src": "/Static/(.*)",
+        "dest": "/Static/$1"
         }
     ]
   }
